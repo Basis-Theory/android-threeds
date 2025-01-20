@@ -8,7 +8,7 @@ dependencyResolutionManagement {
     repositories {
         //...other repositories
         maven {
-          setUrl("https://maven.pkg.github.com/basis-theory/threeds-android")
+          setUrl("https://maven.pkg.github.com/basis-theory/android-threeds")
           credentials {
             username = // GH username
             password = // Personal Access Token (Classic) https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages#authenticating-to-github-packages
