@@ -9,7 +9,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId "com.basistheory"
-            artifactId "3ds-android"
+            artifactId "android-threeds"
             version = project.hasProperty('version') ? project.version : 'default-version'
             artifact("$buildDir/outputs/aar/lib-release.aar")
         }
