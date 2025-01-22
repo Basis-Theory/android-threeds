@@ -19,7 +19,7 @@ publishing {
     repositories {
         maven {
             name "GithubPackages"
-            url uri("https://maven.pkg.github.com/basis-theory/threeds-android")
+            url uri("https://maven.pkg.github.com/basis-theory/android-threeds")
 
             credentials {
                 username = "platform@basistheory.com"
