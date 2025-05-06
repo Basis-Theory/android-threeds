@@ -7,6 +7,7 @@ configurations.all {
     resolutionStrategy {
         force 'io.netty:netty-handler:4.1.118.Final'
         force 'io.netty:netty-codec-http2:4.1.118.Final'
+        force 'io.grpc:grpc-netty:1.58.0'
     }
 }
 
