@@ -63,8 +63,10 @@ android {
 
 configurations.all {
     resolutionStrategy {
-        force 'io.netty:netty-codec-http2:4.1.100.Final'
+        force 'io.netty:netty-codec-http2:4.1.118.Final'
+        force 'io.netty:netty-handler:4.1.118.Final'
         force 'com.google.protobuf:protobuf-java:3.25.5'
+        force 'com.google.protobuf:protobuf-javalite:4.28.2'
         force 'com.nimbusds:nimbus-jose-jwt:9.37.2'
         force 'net.minidev:json-smart:2.4.9'
     }

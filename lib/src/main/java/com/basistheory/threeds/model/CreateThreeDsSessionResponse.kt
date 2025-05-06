@@ -20,5 +20,8 @@ data class CreateThreeDsSessionResponse(
     val directoryServerId: String,
 
     @SerialName("recommended_version")
-    val recommendedVersion: String
+    val recommendedVersion: String,
+
+    @SerialName("additional_card_brands")
+    val additionalCardBrands: List<String>? = null
 )
