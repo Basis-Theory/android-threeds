@@ -12,8 +12,7 @@ appId: com.basistheory.threeds.example
 
 # Card 1
 - tapOn: "Token ID"
-- inputText: "cf10ed54-65de-470c-a5f3-30da34a71f83" #  4200000000000015
-- hideKeyboard
+- inputText: "fddcb1c6-d538-42f0-868a-ccb520aa5c5e" #  4200000000000015
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -25,7 +24,7 @@ appId: com.basistheory.threeds.example
       visible: "Purchase authentication"
       timeout: 10000
 - tapOn:
-      below: "Enter your code below"
+    id: "dataEntry"
 - inputText: "1234"
 - tapOn: "Submit"
 - assertVisible: "Challenge successful"
@@ -37,8 +36,7 @@ appId: com.basistheory.threeds.example
 
 # Card 2
 - tapOn: "Token ID"
-- inputText: "c0e18aa1-4dc9-4baa-8aec-4badfa1119ca" #  4200000000000004
-- hideKeyboard
+- inputText: "b74cbe4a-c00f-4918-b19f-38c016dfbd77" #  4200000000000004
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -50,7 +48,7 @@ appId: com.basistheory.threeds.example
       visible: "Purchase authentication"
       timeout: 10000
 - tapOn:
-      below: "Enter your code below"
+    id: "dataEntry"
 - inputText: "1234"
 - tapOn: "Submit"
 - assertVisible: "Challenge successful"
@@ -63,8 +61,7 @@ appId: com.basistheory.threeds.example
   # Card 3
 
 - tapOn: "Token ID"
-- inputText: "3049bd17-f705-4e0a-ae2d-5fabe1497044" #  4917610000000000 Visa
-- hideKeyboard
+- inputText: "f569fe9c-f687-4525-9264-e3254ad008ac" #  4917610000000000 Visa
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -76,7 +73,7 @@ appId: com.basistheory.threeds.example
       visible: "Purchase authentication"
       timeout: 10000
 - tapOn:
-      below: "Enter your code below"
+    id: "dataEntry"
 - inputText: "1234"
 - tapOn: "Submit"
 - assertVisible: "Challenge successful"

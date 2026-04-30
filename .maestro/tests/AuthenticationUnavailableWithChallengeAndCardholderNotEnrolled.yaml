@@ -12,7 +12,7 @@ appId: com.basistheory.threeds.example
 
 # Card 1
 - tapOn: "Token ID"
-- inputText: "003f69e1-99c6-4536-8808-14a2f109b203" #  4200000000000010 Visa
+- inputText: "b7073ebb-80c6-464e-b2c1-11784b94b069" #  4200000000000010 Visa
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -24,10 +24,9 @@ appId: com.basistheory.threeds.example
       visible: "Purchase authentication"
       timeout: 10000
 - tapOn:
-      below: "Enter your code below"
+    id: "dataEntry"
 - inputText: "1234"
 - tapOn: "Submit"
-- hideKeyboard
 - assertVisible: "Challenge failed"
 - tapOn:
     text: "Get Challenge Result"
@@ -39,7 +38,7 @@ appId: com.basistheory.threeds.example
 # Card 2
 
 - tapOn: "Token ID"
-- inputText: "1ee130af-2396-4de5-8ef0-6845f89a96b8" #  6011000400000000 Discover
+- inputText: "e17559b7-ab39-49cc-b6f7-eb3293ee50dd" #  6011000400000000 Discover
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -51,10 +50,9 @@ appId: com.basistheory.threeds.example
       visible: "Purchase authentication"
       timeout: 10000
 - tapOn:
-      below: "Enter your code below"
+    id: "dataEntry"
 - inputText: "1234"
 - tapOn: "Submit"
-- hideKeyboard
 - assertVisible: "Challenge failed"
 - tapOn:
     text: "Get Challenge Result"
