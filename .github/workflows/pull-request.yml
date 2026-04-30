@@ -73,11 +73,11 @@ jobs:
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 32
+          api-level: 36
           arch: x86_64
           target: default
           cores: 2
-          profile: pixel_3a
+          profile: pixel_7
           ram-size: 6144M
           sdcard-path-or-size: 1024M
           force-avd-creation: false
@@ -118,7 +118,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/gradle@master
+        uses: snyk/actions/gradle-9-jdk17@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_API_KEY }}
         with:
