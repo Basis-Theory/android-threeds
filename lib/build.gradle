@@ -31,11 +31,11 @@ publishing {
 
 android {
     namespace 'com.basistheory.threeds'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
-        minSdk 21
-        targetSdk 34
+        minSdk 24
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -53,8 +53,12 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    lint {
+        disable "NullSafeMutableLiveData"
     }
     kotlinOptions {
         jvmTarget = '17'
@@ -63,17 +67,22 @@ android {
 
 configurations.all {
     resolutionStrategy {
-        force 'io.netty:netty-codec-http2:4.1.118.Final'
-        force 'io.netty:netty-handler:4.1.118.Final'
+        force 'io.netty:netty-codec-http2:4.1.132.Final'
+        force 'io.netty:netty-handler:4.1.132.Final'
         force 'com.google.protobuf:protobuf-java:3.25.5'
         force 'com.google.protobuf:protobuf-javalite:4.28.2'
         force 'com.nimbusds:nimbus-jose-jwt:9.37.2'
         force 'net.minidev:json-smart:2.4.9'
+        force 'org.bouncycastle:bcpg-jdk18on:1.84'
+        force 'org.bouncycastle:bcpkix-jdk18on:1.84'
+        force 'org.bouncycastle:bcprov-jdk18on:1.84'
+        force 'org.bouncycastle:bcprov-jdk15to18:1.84'
     }
 }
 
 dependencies {
-    implementation "com.ravelin.threeds2service:threeds2service-sdk:1.4.2"
+    implementation "com.ravelin.threeds2service:threeds2service-sdk:2.0.2"
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
 
     implementation libs.androidx.core.ktx
 

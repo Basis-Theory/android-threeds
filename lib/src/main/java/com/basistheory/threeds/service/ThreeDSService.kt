@@ -16,7 +16,7 @@ import com.basistheory.threeds.model.ThreeDSSessionCreationError
 import com.basistheory.threeds.model.UpdateThreeDsSessionRequest
 import com.ravelin.core.configparameters.ConfigParametersBuilder
 import com.ravelin.core.transaction.challenge.ChallengeParameters
-import com.ravelin.threeds2service.instantiation.ThreeDS2ServiceInstance
+import com.ravelin.threeDS2Service.instantiation.ThreeDS2ServiceInstance
 import com.ul.emvco3ds.sdk.spec.AuthenticationRequestParameters
 import com.ul.emvco3ds.sdk.spec.ChallengeStatusReceiver
 import com.ul.emvco3ds.sdk.spec.CompletionEvent
@@ -168,7 +168,6 @@ class ThreeDSService(
                     context,
                     configParameters,
                     locale,
-                    null, // UI customization not supported for V1
                     null, // UI customization not supported for V1
                     scope
                 )

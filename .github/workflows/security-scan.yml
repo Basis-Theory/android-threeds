@@ -20,7 +20,7 @@ jobs:
           command: code test
 
       - name: Snyk dependency scan
-        uses: snyk/actions/gradle@master
+        uses: snyk/actions/gradle-9-jdk17@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_API_KEY }}
         with:
