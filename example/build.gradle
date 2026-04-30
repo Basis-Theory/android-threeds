@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace 'com.basistheory.threeds.example'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.basistheory.threeds.example"
-        minSdk 21
-        targetSdk 34
+        minSdk 24
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -39,8 +39,12 @@ android {
     }
 
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    lint {
+        disable "NullSafeMutableLiveData"
     }
     kotlinOptions {
         jvmTarget = '17'
@@ -54,6 +58,7 @@ android {
     packaging {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            pickFirsts += '/META-INF/versions/9/OSGI-INF/MANIFEST.MF'
         }
     }
     buildFeatures {
@@ -66,13 +71,24 @@ android {
 
 configurations.all {
     resolutionStrategy {
-        force 'io.netty:netty-codec-http2:4.1.100.Final'
+        force 'io.netty:netty-codec-http2:4.1.132.Final'
+        force 'io.netty:netty-handler:4.1.132.Final'
+        force 'io.netty:netty-codec:4.1.132.Final'
+        force 'io.netty:netty-buffer:4.1.132.Final'
+        force 'io.netty:netty-common:4.1.132.Final'
+        force 'io.netty:netty-resolver:4.1.132.Final'
+        force 'io.netty:netty-transport:4.1.132.Final'
         force 'com.google.protobuf:protobuf-java:3.25.5'
+        force 'org.bouncycastle:bcpg-jdk18on:1.84'
+        force 'org.bouncycastle:bcpkix-jdk18on:1.84'
+        force 'org.bouncycastle:bcprov-jdk18on:1.84'
+        force 'org.bouncycastle:bcprov-jdk15to18:1.84'
     }
 }
 
 dependencies {
     implementation project(':lib')
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.lifecycle.runtime.ktx

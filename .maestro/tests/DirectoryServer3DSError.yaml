@@ -12,8 +12,7 @@ appId: com.basistheory.threeds.example
 
 # Card 1
 - tapOn: "Token ID"
-- inputText: "0e2e6f4c-6708-42be-9f0d-c74cdd451a71" #  4200000000000012 Visa
-- hideKeyboard
+- inputText: "2deb3da0-9ebc-4732-ae93-9e91bfa269d4" #  4200000000000012 Visa
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -21,14 +20,13 @@ appId: com.basistheory.threeds.example
 - tapOn:
     text: "Start Challenge"
     retryTapIfNoChange: false
-- assertVisible: "Unable to authenticate, 3DS service responded 502"
+- assertVisible: "Unable to authenticate, 3DS service responded 424"
 - tapOn: "Clear"
 
 # Card 2
 
 - tapOn: "Token ID"
-- inputText: "a24a4c24-f6a2-4246-8066-aea0f672a05d" #  122000000000003 Airplus
-- hideKeyboard
+- inputText: "74ca4bfc-00ca-4a1d-8290-52a4c31fcc31" #  122000000000003 Airplus
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
@@ -36,6 +34,6 @@ appId: com.basistheory.threeds.example
 - tapOn:
     text: "Start Challenge"
     retryTapIfNoChange: false
-- assertVisible: "Unable to authenticate, 3DS service responded 502"
+- assertVisible: "Unable to authenticate, 3DS service responded 424"
 - tapOn: "Clear"
 - stopApp
