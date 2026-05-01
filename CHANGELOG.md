@@ -1,3 +1,16 @@
+## [1.2.0](https://github.com/Basis-Theory/android-threeds/compare/1.1.0...1.2.0) (2026-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* [3DS sdks] Upgrade ravelin dependencies (#21)
+
+### Features
+
+* [3DS sdks] Upgrade ravelin dependencies ([#21](https://github.com/Basis-Theory/android-threeds/issues/21)) ([83c38d2](https://github.com/Basis-Theory/android-threeds/commit/83c38d2f6cbdc1e08ff3ea76cc751b09f636918e))
+* BREAKING CHANGES  update ravelin dependencies ([#22](https://github.com/Basis-Theory/android-threeds/issues/22)) ([4475123](https://github.com/Basis-Theory/android-threeds/commit/44751234a4df59832174b968e769c1d0ff36cd5d))
+
+
 ## [1.1.0](https://github.com/Basis-Theory/android-threeds/compare/1.0.2...1.1.0) (2025-05-06)
 
 
