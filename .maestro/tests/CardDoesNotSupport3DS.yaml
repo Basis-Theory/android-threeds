@@ -12,11 +12,10 @@ appId: com.basistheory.threeds.example
 
 # Card 1
 - tapOn: "Token ID"
-- inputText: "6230ac75-261f-49dc-aefd-958d503a8b1f" #  4100000000000003
-- hideKeyboard
+- inputText: "f3951887-5326-4734-8cab-3d647e9fac5b" #  4100000000000003
 - tapOn:
     text: "Create Session"
     retryTapIfNoChange: false
-- assertVisible: "Unable to create session, 3DS service responded 400"
+- assertVisible: "Unable to create session, 3DS service responded 424"
 - tapOn: "Clear"
 - stopApp
