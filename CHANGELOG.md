@@ -1,3 +1,11 @@
+### [1.2.1](https://github.com/Basis-Theory/android-threeds/compare/1.2.0...1.2.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* **ENG-11542:** use bt_semantic_release app token for release write-back ([#23](https://github.com/Basis-Theory/android-threeds/issues/23)) ([e0f49fa](https://github.com/Basis-Theory/android-threeds/commit/e0f49fa444a18a642a69eea33574eeae7e2a9f14))
+
+
 ## [1.2.0](https://github.com/Basis-Theory/android-threeds/compare/1.1.0...1.2.0) (2026-05-01)
 
 
