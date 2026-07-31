@@ -318,7 +318,7 @@ class ThreeDSService(
                     purchaseAmount = authenticationResponse.purchaseAmount
                 )
 
-                Telemetry.send("challenge.started", sessionId, apiKey)
+                Telemetry.send("challenge.started", sessionId)
 
                 transaction!!.doChallenge(
                     currentActivity = activity,
@@ -330,7 +330,7 @@ class ThreeDSService(
                                 transactionStatusMap[completionEvent?.getTransactionStatus()]
 
                             Telemetry.send(
-                                "challenge.completed", sessionId, apiKey,
+                                "challenge.completed", sessionId,
                                 mapOf("authenticationStatus" to (transactionStatus ?: ""))
                             )
 
@@ -350,13 +350,13 @@ class ThreeDSService(
                         }
 
                         override fun cancelled() {
-                            Telemetry.send("challenge.abandoned", sessionId, apiKey)
+                            Telemetry.send("challenge.abandoned", sessionId)
                             closeTransaction()
                             onFailure(ChallengeResponse(sessionId, transactionStatusMap["N"]!!, "Challenge cancelled"))
                         }
 
                         override fun timedout() {
-                            Telemetry.send("challenge.timed_out", sessionId, apiKey)
+                            Telemetry.send("challenge.timed_out", sessionId)
                             closeTransaction()
                             onFailure(ChallengeResponse(sessionId, transactionStatusMap["N"]!!, "Challenge timed out"))
                         }

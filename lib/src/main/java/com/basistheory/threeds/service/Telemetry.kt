@@ -20,7 +20,6 @@ internal object Telemetry {
     fun send(
         event: String,
         sessionId: String,
-        apiKey: String,
         attributes: Map<String, String> = emptyMap()
     ) {
         val payload = JSONObject().apply {
@@ -29,7 +28,6 @@ internal object Telemetry {
             put("service", "3ds-android")
             put("event", event)
             put("sessionId", sessionId)
-            put("apiKey", apiKey)
             put("message", event)
             attributes.forEach { (key, value) -> put(key, value) }
         }
