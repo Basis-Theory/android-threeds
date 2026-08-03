@@ -1,5 +1,6 @@
 package com.basistheory.threeds.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 
@@ -43,7 +44,13 @@ data class AuthenticationResponse(
 
     val messageExtensions: List<String> = emptyList(),
 
-    val acsRenderingType: AcsRenderingType? = null
+    val acsRenderingType: AcsRenderingType? = null,
+
+    @SerialName("tenant_id")
+    val tenantId: String? = null,
+
+    @SerialName("tenant_type")
+    val tenantType: String? = null
 )
 
 @Serializable
