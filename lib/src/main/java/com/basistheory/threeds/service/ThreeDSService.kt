@@ -323,8 +323,6 @@ class ThreeDSService(
                     "tenantType" to (authenticationResponse.tenantType ?: "")
                 )
 
-                Telemetry.send("challenge.started", sessionId, tenantAttributes)
-
                 transaction!!.doChallenge(
                     currentActivity = activity,
                     challengeParameters = params,
@@ -388,6 +386,8 @@ class ThreeDSService(
                             )
                         }
                     })
+
+                Telemetry.send("challenge.started", sessionId, tenantAttributes)
             } else {
                 onCompleted(
                     ChallengeResponse(
